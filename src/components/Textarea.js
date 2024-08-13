@@ -13,9 +13,16 @@ export default function Textarea(props) {
         let newText = text.toLowerCase();
         setText(newText)
     }
+    
     const handleOnchange = (event)=>{
         console.log("onChange")
         setText(event.target.value)
+    }
+    const handleCopy =()=>{
+        console.log("i have copied the whole text")
+        var text = document.getElementById("myBox")
+        text.select();
+        navigator.clipboard.writeText(text.value);
     }
     const [text , setText]= useState('');
     return (
@@ -27,6 +34,9 @@ export default function Textarea(props) {
     </div>
     <button className="btn btn-primary mx-2" onClick={handleUpClick}  >Convert to Uppercase</button>
     <button className="btn btn-primary mx-2" onClick={handleloClick}  >Convert to Uppercase</button>
+    <button className="btn btn-primary mx-2" onClick={handleCopy}  >copy text</button>
+   
+
 
     </div>
     <div className="container">
