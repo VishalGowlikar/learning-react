@@ -1,7 +1,14 @@
 import React from 'react'
 
+
+
+
+
 export default function Navbar(props) {
+  
   return (
+
+   
     <>
           <nav className="navbar navbar-expand-lg bg-body-tertiary ">
             <div className="container-fluid">
@@ -22,6 +29,10 @@ export default function Navbar(props) {
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button className="btn btn-primary" type="submit">Search</button>
               </form>
+              <div className="form-check form-switch mx-3" >
+              <input className="form-check-input" type="checkbox"  role="switch" id="flexSwitchCheckDefault"/>
+              <label className="form-check-label" for="flexSwitchCheckDefault">Dark mode</label>
+              </div>
             </div>
           </div>
         </nav>
